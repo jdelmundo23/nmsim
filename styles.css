@@ -1,0 +1,119 @@
+@font-face {font-family: Oswald;src: url(assets/Oswald-Regular.ttf);}
+@font-face {font-family: SansPro;src: url(assets/SourceSansPro-SemiBold.ttf);}
+body{
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(assets/vector-DEC-2020-51_generated.jpg);
+}
+.nmTitle{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2em;
+    font-family: "Oswald";
+    line-height: 200%;
+}
+.nmDisclaimer {
+    color: rgba(255, 255, 255, 0.50);
+    line-height: 150%;
+    font-size: 1.25em;
+}
+.nmTileGroup{
+    display: flex;
+    justify-content: space-between;
+    margin: 7%;
+    margin-top: 3%;
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,.2);
+}
+#nmTile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 15%;
+    height: 450px;
+    overflow:hidden;
+    box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
+}
+#nmTile:hover{
+    filter: brightness(150%);
+}
+
+/* Tier Styles */
+.select{
+    border: 4px solid #5A9FE1;
+    background-color: #20384F;
+}
+.deluxe{
+    border: 4px solid #1C847D;
+    background-color: #0E383E;
+}
+.premium{
+    border: 4px solid #AD5D81;
+    background-color: #3A2B42;
+}
+.exclusive{
+    border: 4px solid #E5B85D;
+    background-color: #403E2C;
+}
+
+
+.gunImg{
+    position: absolute;
+    top: 30%;
+    transform: rotate(45deg);
+    max-width: 500px;
+    max-height: 150px;
+    padding-top: 20px;
+}
+.gunName{
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 7.5px;
+    font-size: 1.5em;
+    width: 70%;
+    font-family: "SansPro";
+    font-weight: bold;
+}
+.tileBottom{
+    display: flex;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-height: 20%;
+}
+.tileCover{
+    position: absolute;
+    top: 1;
+    left: -1;
+    width: 100%;
+    height: 100%;
+    border-width: 0px;
+    filter: brightness(25%);
+}
+.tileCover:hover{
+    position: absolute;
+    top: 1;
+    left: -1;
+    width: 100%;
+    height: 100%;
+    border-width: 0px;
+    filter: brightness(25%);
+}
+.tierImgHolder{
+    position: relative;
+    width: 20%;
+    align-content: end;
+}
+.tierImg{
+    position: absolute;
+    transform: rotate(0deg);
+    width: 80%;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 5px;
+}
+.disabled{
+    display: none;
+}
