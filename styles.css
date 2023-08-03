@@ -23,7 +23,6 @@ body{
     justify-content: space-between;
     margin: 7%;
     margin-top: 3%;
-    box-shadow: 20px 20px 20px 20px rgba(0,0,0,.2);
 }
 #nmTile{
     position: relative;
@@ -34,7 +33,7 @@ body{
     width: 15%;
     height: 450px;
     overflow:hidden;
-    box-shadow: 20px 20px 20px 20px rgba(0,0,0,.3);
+    box-shadow: 20px 0px 20px 20px rgba(0,0,0,.3);
 }
 #nmTile:hover{
     filter: brightness(150%);

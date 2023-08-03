@@ -62,5 +62,17 @@ tierData.then(data => {
                 cover.classList.add("disabled");
             })
         })
+        let sr = ScrollReveal({
+            duration: 2000,
+            distance: "60px",
+        });
+        sr.reveal(".tileCover", {delay: 0, opacity: 100, distance: "0px"});
+        sr.reveal("#nmTile", {delay: 200, opacity: 100});
+        
+        console.log("hi");
     });
+
 });
+
+
+
