@@ -1,29 +1,52 @@
 @font-face {font-family: Oswald;src: url(assets/Oswald-Regular.ttf);}
 @font-face {font-family: SansPro;src: url(assets/SourceSansPro-SemiBold.ttf);}
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
 body{
     background-size: 130%;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(assets/vector-DEC-2020-51_generated.jpg);
 }
+
 .nmTitle{
+    margin-top: 25px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
     font-size: 2em;
     font-family: "Oswald";
     line-height: 200%;
 }
+
 .nmDisclaimer {
     color: rgba(255, 255, 255, 0.50);
     line-height: 150%;
-    font-size: 1.25em;
+    font-size: 1.15em;
 }
+
 .nmTileGroup{
     display: flex;
     justify-content: space-between;
-    margin: 7%;
-    margin-top: 3%;
+    margin: 3% 7% 5% 7%
 }
+
 #nmTile{
     position: relative;
     display: flex;
@@ -31,10 +54,11 @@ body{
     flex-wrap: wrap;
     align-items: flex-end;
     width: 15%;
-    height: 450px;
+    height: 45vh;
     overflow:hidden;
     box-shadow: 20px 0px 20px 20px rgba(0,0,0,.3);
 }
+
 #nmTile:hover{
     filter: brightness(150%);
 }
@@ -62,7 +86,7 @@ body{
     position: absolute;
     top: 30%;
     transform: rotate(45deg);
-    max-width: 500px;
+    max-width: 50vh;
     max-height: 150px;
     padding-top: 20px;
 }

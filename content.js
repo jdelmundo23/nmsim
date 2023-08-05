@@ -1,14 +1,5 @@
 const group = document.querySelector(".nmTileGroup");
 
-
-// TO-DO ADD PRICES AND FIX BOTTOM HOLDER
-
-
-
-
-
-
-
 // retrieve skin tier data
 const tierData = fetch("https://valorant-api.com/v1/contenttiers").then(response => response.json());
 tierData.then(data => {
@@ -33,9 +24,7 @@ tierData.then(data => {
             // find tier of weapon skin then add valid weapon skin to page
             else {
                 gunNums.push(randomInt);
-                console.log(gun);
                 const gunTier = tiers.find(tier => tier.uuid == gun.contentTierUuid);
-                console.log(gunTier);
                 group.insertAdjacentHTML("beforeend", `
                 <div id="nmTile" class="${gunTier.devName.toLowerCase()}">
                 <img class="gunImg"
@@ -56,23 +45,29 @@ tierData.then(data => {
         }
 
         // add covers based on tier color to each weapon skin
-        const covers = document.querySelectorAll(".tileCover");
-        covers.forEach(cover => {
-            cover.addEventListener("click", event => {
-                cover.classList.add("disabled");
-            })
-        })
-        let sr = ScrollReveal({
-            duration: 2000,
-            distance: "60px",
-        });
-        sr.reveal(".tileCover", {delay: 0, opacity: 100, distance: "0px"});
-        sr.reveal("#nmTile", {delay: 200, opacity: 100});
-        
-        console.log("hi");
-    });
+        addTileCovers();
 
+        addScrollReveal();
+    });
 });
+
+const addTileCovers = () => {
+    const covers = document.querySelectorAll(".tileCover");
+    covers.forEach(cover => {
+        cover.addEventListener("click", event => {
+            cover.classList.add("disabled");
+        })
+    });
+};
+
+const addScrollReveal = () => {
+    let sr = ScrollReveal({
+        duration: 1000,
+        distance: "30px",
+    });
+    sr.reveal(".tileCover", {delay: 0, opacity: 100, distance: "0px"});
+    sr.reveal("#nmTile", {delay: 200, opacity: 100});
+};
 
 
 
