@@ -46,8 +46,6 @@ tierData.then(data => {
 
         // add covers based on tier color to each weapon skin
         addTileCovers();
-
-        addScrollReveal();
     });
 });
 
@@ -58,15 +56,6 @@ const addTileCovers = () => {
             cover.classList.add("disabled");
         })
     });
-};
-
-const addScrollReveal = () => {
-    let sr = ScrollReveal({
-        duration: 1000,
-        distance: "30px",
-    });
-    sr.reveal(".tileCover", {delay: 0, opacity: 100, distance: "0px"});
-    sr.reveal("#nmTile", {delay: 200, opacity: 100});
 };
 
 
