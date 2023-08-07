@@ -61,28 +61,32 @@ body{
     transition: 0.1s ease-in-out;
 }
 
-
 #nmTile:hover{
-    transform: translateY(10px);
     filter: brightness(150%);
+    border-width: 5px;
+}
+
+
+#nmTile:hover .gunImg{
+    filter: drop-shadow(7px 18px 1px rgba(0, 0, 0, 0.5)); 
 }
 
 
 /* Tier Styles */
 .select{
-    border: 2.5px solid #5A9FE1;
+    border: 3px solid #5A9FE1;
     background-color: #20384F;
 }
 .deluxe{
-    border: 2.5px solid #1C847D;
+    border: 3px solid #1C847D;
     background-color: #0E383E;
 }
 .premium{
-    border: 2.5px solid #AD5D81;
+    border: 3px solid #AD5D81;
     background-color: #3A2B42;
 }
 .exclusive{
-    border: 2.5px solid #E5B85D;
+    border: 3px solid #E5B85D;
     background-color: #403E2C;
 }
 
@@ -94,6 +98,7 @@ body{
     max-width: 50vh;
     max-height: 150px;
     padding-top: 20px;
+    transition: 0.1s ease-in-out;
 }
 .gunName{
     color: rgba(255, 255, 255, 1);
